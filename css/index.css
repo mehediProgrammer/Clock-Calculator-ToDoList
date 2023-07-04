@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: darkslateblue;
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.nav-link ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link li a {
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.nav-link li:hover {
+  background: rgb(75, 60, 174);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* =====================================responsive part */
+@media (max-width: 400px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-link {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-link ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-link li {
+    text-align: center;
+  }
+
+  .nav-link li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-link .active {
+    display: flex;
+  }
+}
+
+/* ===========================================================================clock */
+.time-container {
+  color: rgb(19, 156, 19);
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+}
+#seconds {
+  color: goldenrod;
+}
+#brek {
+  color: red;
+}
+#session {
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(192, 21, 21);
+}
+@media (max-width: 400px) {
+  .time-container {
+    color: rgb(35, 19, 156);
+    font-weight: lighter;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+  }
+  #session {
+    font-weight: lighter;
+    font-size: 20px;
+    color: rgb(27, 21, 192);
+  }
+}
+
+/* ==========================================================================clock end */
+/* calculator */
+.container {
+  height: 92vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Calculator {
+  background-color: #ecf0f3;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+  display: grid;
+  grid-template-columns: repeat(4, 68px);
+}
+
+input {
+  grid-column: span 4;
+  height: 70px;
+  width: 260px;
+  background-color: #ecf0f3;
+  box-shadow: inset -5px -5px 12px #ffffff,
+    inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+  border: none;
+  border-radius: 30px;
+  color: rgba(70, 70, 70);
+  font-size: 50px;
+  text-align: end;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+button {
+  height: 48px;
+  width: 48px;
+  background-color: #ecf0f3;
+  box-shadow: -5px -5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+  border: none;
+  border-radius: 50%;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background: #323330;
+  color: white;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.cl {
+  background: red;
+  color: white;
+}
+.del,
+.min,
+.pla,
+.mul,
+.per,
+.dev {
+  background: #141e30;
+  color: white;
+}
+
+.equal {
+  width: 115px;
+  border-radius: 40px;
+  background-color: #ecf0f3;
+  box-shadow: -5px -5px 12px #ffffff, -5px -5px 12px rgba(0, 0, 0, 0.1.6);
+  background-color: #07692d;
+  color: white;
+}
+/* =============================================== */
+.box {
+  width: 300px;
+  min-height: 470px;
+  background-color: #141e30;
+  border-radius: 10px;
+  padding: 5px;
+}
+.box input {
+  background: wheat;
+  border-radius: 10px;
+  padding: 10px;
+}
+#item {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px 0px 2px gray;
+  display: block;
+}
+#to-do-box {
+  margin-top: 10px;
+  list-style: none;
+}
+#to-do-box li {
+  position: relative;
+  background-color: cadetblue;
+  padding: 5px;
+  border-radius: 2px;
+  padding-right: 5px;
+  text-align: justify;
+  margin-top: 10px;
+  user-select: none;
+}
+#to-do-box li i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: rgb(108, 7, 7);
+  font-weight: bolder;
+}
+.done {
+  text-decoration: line-through;
+  color: wheat;
+  background-color: brown !important;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="brand-title">
+        <i class="fa-solid fa-globe"></i> <span>World</span>
+      </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="nav-link">
+        <ul>
+          <li><a href="">Time</a></li>
+          <li><a href="">Calculator</a></li>
+          <li><a href="">ToDoList</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- =====================================clock part start================================= -->
+    <div class="time-container">
+      <span id="hours">00</span>
+      <span id="brek"> : </span>
+      <span id="minutes">00</span>
+      <span id="brek"> : </span>
+      <span id="seconds">00</span>
+      <span id="session">AM/PM</span>
+    </div>
+    <!-- ==========================================Calculator part start========================= -->
+
+    <div class="container">
+      <div class="Calculator">
+        <input type="text" placeholder="000" id="outputScreen" />
+        <button onclick="Clear()" class="cl">C</button>
+        <button onclick="display('/')" class="dev">/</button>
+        <button onclick="display('%')" class="per">%</button>
+        <button onclick="del()" class="del">DEL</button>
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button>
+        <button onclick="display('9')">9</button>
+        <button onclick="display('*')" class="mul">*</button>
+        <button onclick="display('4')">4</button>
+        <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+        <button onclick="display('-')" class="min">-</button>
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="display('+')" class="pla">+</button>
+        <button onclick="display('.')" class="dot">.</button>
+        <button onclick="display('0')">0</button>
+        <button onclick="Calculator()" class="equal">=</button>
+      </div>
+      <!-- ==========================================Calculator part end=========================== -->
+      <!-- ==========================================to do list part start=========================== -->
+      <div class="box">
+        <input
+          type="text"
+          id="item"
+          autofocus
+          placeholder="write something..."
+        />
+        <ul id="to-do-box"></ul>
+      </div>
+    </div>
+
+    <!-- ==========================================to do list part start=========================== -->
+  </body>
+  <script src="js/index.js"></script>
+</html>
